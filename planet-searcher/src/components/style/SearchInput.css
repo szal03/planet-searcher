@@ -1,0 +1,26 @@
+.searchInput{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.searchInput input{
+    width: 25%;
+    font-size: 25px;
+    font-family: Montserrat;
+    color: aliceblue;
+    background-color: transparent;
+    border-color: unset;
+    border: 0;
+    border-bottom: 1px solid white;
+    background: none;
+    transition: box-shadow .3s ease-out;
+}
+.searchInput input:focus{
+    outline: none;
+    box-shadow: 0 10px 20px -8px rgba(255,255,255, .5);
+}
+.searchInput label{
+    font-family: Montserrat, sans-serif;
+}
