@@ -9,3 +9,14 @@
     margin-bottom: 50px;
     margin-top: 10%;
 }
+.searchHeader{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: Montserrat, sans-serif;
+    color: aliceblue;
+    margin-bottom: 25px;
+    margin-top: 2%;
+}

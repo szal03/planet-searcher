@@ -1,0 +1,14 @@
+.planetBox{
+    width: 25vw;
+    height: 250px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50%;
+}
+.backgroundImgStyle{
+    width: 25vw;
+    height: 250px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50%;
+}

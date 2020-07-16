@@ -2,3 +2,19 @@ body{
   box-sizing: border-box;
   font-family: montserrat;
 }
+.contentContainer{
+  width: 90%;
+  padding:1%;
+  margin: 4%;
+}
+
+
+.cardsContainer{
+  color: aliceblue;
+  margin: 10%;
+  width: 80%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+  justify-content: center;
+}
