@@ -9,15 +9,14 @@ const API = 'https://images-api.nasa.gov/search';
 class App extends React.Component{
 
     state={
-        inputValue: ""
-
+        inputValue: "",
+        searchValue:[],
+        statusSearch:false,
     }
 
     handleSearchInput=(e)=>{
         this.setState({
             inputValue: e.target.value,
-            searchValue:[],
-            statusSearch:false,
         })
     }
     handleSumbmitValue=()=>{
@@ -33,27 +32,34 @@ class App extends React.Component{
             }
             throw Error(response.status)
         }).then(response => response.json())
-            .then(data => {console.log(data.collection.items)
+            .then(data => {console.log(data.collection.items);
             this.setState({
                 searchValue: data.collection.items,
                 statusSearch: true,
             })})
             .catch(error=>console.log(error))
     }
+    handleBackButton=()=>{
+        this.setState({
+            inputValue: "",
+            searchValue: [],
+            statusSearch: false,
+        })
+    }
 
 render(){
         const searchActive = this.state.statusSearch;
   return (
       <div className="App">
-          <Header statusForSearch={this.state.statusSearch}/>
+          <Header statusForSearch={this.state.statusSearch} click={this.handleBackButton}/>
           <HeroImg/>
-          <SearchInput
-              value={this.state.inputValue}
-              change={this.handleSearchInput}
-              submitSearch={this.handleSumbmitValue}/>
+         {searchActive? null : <SearchInput
+             value={this.state.inputValue}
+             change={this.handleSearchInput}
+             submitSearch={this.handleSumbmitValue}/>}
               <div className="contentContainer">
                   <div className="cardsContainer">
-                      {searchActive? <PlanetCard data={this.state.searchValue}/> : null}
+                      {searchActive? <PlanetCard data={this.state.searchValue} name={this.state.inputValue}/> : null }
                   </div>
               </div>
 

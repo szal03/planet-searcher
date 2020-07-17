@@ -1,20 +1,24 @@
 body{
-  box-sizing: border-box;
+  box-sizing: content-box;
   font-family: montserrat;
+  margin: 0;
 }
 .contentContainer{
   width: 90%;
   padding:1%;
-  margin: 4%;
+
 }
 
 
 .cardsContainer{
-  color: aliceblue;
+  color: black;
+  text-align: center;
   margin: 10%;
-  width: 80%;
+  width: 90%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 20px;
+  grid-gap: 1%;
+  grid-column-gap: 2%;
   justify-content: center;
+
 }

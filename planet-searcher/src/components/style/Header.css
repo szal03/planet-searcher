@@ -20,3 +20,19 @@
     margin-bottom: 25px;
     margin-top: 2%;
 }
+.backButton{
+    width: 20%;
+    height: 70px;
+    background-color: transparent;
+    color: aliceblue;
+    font-family: Montserrat;
+    font-size: 27px;
+    border-color: aliceblue;
+}
+.backButton:focus{
+    box-shadow: 0 10px 20px -8px rgba(255,255,255, .5);
+}
+.backButton:hover{
+    box-shadow: 0 10px 20px -8px rgba(255,255,255, .5);
+    transition: .4s;
+}

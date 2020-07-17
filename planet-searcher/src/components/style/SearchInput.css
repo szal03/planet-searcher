@@ -10,7 +10,7 @@
 }
 .searchInput input{
     width: 32%;
-    font-size: 25px;
+    font-size: 30px;
     font-family: Montserrat;
     color: aliceblue;
     background-color: transparent;
@@ -19,23 +19,34 @@
     border-bottom: 1px solid aliceblue;
     background: none;
     margin-bottom: 3%;
+    text-align: center;
     transition: box-shadow .3s ease-out;
 }
 .searchInput input:focus{
     outline: none;
     box-shadow: 0 10px 20px -8px rgba(255,255,255, .5);
 }
+.searchInput input:hover{
+    outline: none;
+    box-shadow: 0 10px 20px -8px rgba(255,255,255, .5);
+
+}
 .searchInput label{
     font-family: Montserrat, sans-serif;
 }
 .searchButton{
     width: 20%;
-    height: 4vh;
+    height: 70px;
     background-color: transparent;
     color: aliceblue;
     font-family: Montserrat;
-    font-size: 18px;
-   border-color: aliceblue;
-
-
+    font-size: 27px;
+    border-color: aliceblue;
+}
+.searchButton:focus{
+    box-shadow: 0 10px 20px -8px rgba(255,255,255, .5);
+}
+.searchButton:hover{
+    box-shadow: 0 10px 20px -8px rgba(255,255,255, .5);
+    transition: .4s;
 }

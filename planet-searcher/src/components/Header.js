@@ -11,10 +11,13 @@ const StartHeader = ()=>{
 }
 
 
-const SearchHeader = ()=>{
+const SearchHeader = (props)=>{
     return(
         <div className="searchHeader">
+        <div>
             <h1>Planet Searcher</h1>
+        </div>
+            <button class="backButton" onClick={props.click}>Back</button>
         </div>
     )
 }
@@ -23,7 +26,7 @@ const Header = (props)=>{
     const status=props.statusForSearch;
     return(
         <div>
-            { status?  <SearchHeader/>: <StartHeader/>}
+            { status?  <SearchHeader click={props.click}/>: <StartHeader/>}
         </div>
     )
 }

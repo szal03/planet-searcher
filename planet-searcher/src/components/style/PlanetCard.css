@@ -1,14 +1,24 @@
 .planetBox{
-    width: 25vw;
+    display: grid;
+    background: aliceblue;
+    margin: 2%;
+}
+.planetBox:hover{
+    background: #d7ecff;
+    box-shadow: 0 10px 20px -8px rgba(255,255,255, .5);
+    transition: .4s;
+}
+.backgroundImgStyle{
+
     height: 250px;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50%;
 }
-.backgroundImgStyle{
-    width: 25vw;
-    height: 250px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: 50%;
+.planetInBox{
+    width: 88%;
+    padding: 6%;
+}
+.titleStyle{
+    margin-top: 5%;
 }
