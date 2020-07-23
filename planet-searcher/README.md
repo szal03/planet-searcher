@@ -1,3 +1,13 @@
+## Planet searcher
+
+##### A small application that displays photos of the planet. The user enters the name of the planet in the search input and confirms the choice. Then the application returns the search results - photos with titles.
+
+### Technologies: javaScript, React, CSS
+#### uses: images.nasa.gov API
+
+
+##
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
