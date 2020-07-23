@@ -2,10 +2,6 @@ import React from "react";
 import './style/PlanetCard.css'
 
 
-const PlanetItem=(props)=>{
-
-}
-
 
 const PlanetCard =(props)=>{
     const p = props.data;
