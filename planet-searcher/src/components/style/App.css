@@ -3,22 +3,16 @@ body{
   font-family: montserrat;
   margin: 0;
 }
-.contentContainer{
-  width: 90%;
-  padding:1%;
-
-}
-
 
 .cardsContainer{
   color: black;
   text-align: center;
-  margin: 10%;
-  width: 90%;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 1%;
-  grid-column-gap: 2%;
   justify-content: center;
+}
 
+@media (min-width: 1200px)
+{
+  .container, .container-sm, .container-md, .container-lg, .container-xl {
+    max-width: 90%;
+}
 }
