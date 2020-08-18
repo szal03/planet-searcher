@@ -5,8 +5,11 @@ import HeroImg from "./HeroImg";
 import SearchInput from "./SearchInput";
 import PlanetCard from "./PlanetCard";
 import 'bootstrap/dist/css/bootstrap.css';
+import PlanetInfoWindow from "./PlanetInfoWindow";
 
 const API = 'https://images-api.nasa.gov/search';
+
+
 class App extends React.Component {
 
     state = {
@@ -14,6 +17,8 @@ class App extends React.Component {
         searchValue: [],
         statusSearch: false,
         failSearchStatus: false,
+        searchObject: [],
+        showInfoWindow: false,
     }
 
     handleSearchInput = (e) => {
@@ -60,9 +65,31 @@ class App extends React.Component {
         })
     }
 
+    handleShowInfo = (id) => {
+        console.log(id);
+        const collection = this.state.searchValue;
+        const searchObject = collection.filter(elem => elem.data[0].nasa_id === id);
+        const showInfoWindow = true;
+        console.log(searchObject);
+        this.setState({
+            searchObject,
+            showInfoWindow: true,
+        })
+    }
+
+    handleHideInfo = () => {
+        this.setState({
+            showInfoWindow: false,
+        })
+    }
+
+
+
     render() {
         const searchActive = this.state.statusSearch;
         const searchStatus = this.state.failSearchStatus;
+        const searchObject = this.state.searchObject;
+        const showInfoWindow = this.state.showInfoWindow;
         return (
             <div className="App">
                 <Header statusForSearch={this.state.statusSearch} click={this.handleBackButton} searchStatus={searchStatus} />
@@ -73,7 +100,12 @@ class App extends React.Component {
                     submitSearch={this.handleSumbmitValue} />}
                 <div className="contentContainer">
                     <div className="cardsContainer">
-                        {searchActive ? <PlanetCard data={this.state.searchValue} name={this.state.inputValue} /> : null}
+                        {searchActive ? <PlanetCard data={this.state.searchValue}
+                            name={this.state.inputValue}
+                            showInfo={this.handleShowInfo}
+                            searchObject={searchObject}
+                            showInfoWindow={showInfoWindow}
+                            hideInfo={this.handleHideInfo} /> : null}
                     </div>
                 </div>
 
