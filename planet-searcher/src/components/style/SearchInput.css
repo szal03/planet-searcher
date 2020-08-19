@@ -1,0 +1,97 @@
+.searchInput{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3%;
+}
+.searchInput input{
+    width: 32%;
+    font-size: 30px;
+    font-family: Montserrat;
+    color: aliceblue;
+    background-color: transparent;
+    border-color: unset;
+    border: 0;
+    border-bottom: 1px solid aliceblue;
+    background: none;
+    margin-bottom: 3%;
+    text-align: center;
+    transition: box-shadow .3s ease-out;
+}
+.searchInput input:focus{
+    outline: none;
+    box-shadow: 0 10px 20px -8px rgba(255,255,255, .5);
+}
+.searchInput input:hover{
+    outline: none;
+    box-shadow: 0 10px 20px -8px rgba(255,255,255, .5);
+
+}
+.searchInput label{
+    font-family: Montserrat, sans-serif;
+}
+
+.infoBox{
+margin: 2% 0;
+color: aliceblue;
+border: 1px solid aliceblue;
+font-size: 18px;
+font-family: Montserrat;
+padding: 1%;
+transition: box-shadow .3s ease-out;
+}
+.infoBox:hover{
+    box-shadow: 0 10px 20px -8px rgba(255,255,255, .5);
+}
+.infoInBox{
+    width: 40%;
+    font-family: Montserrat;
+    color: aliceblue;
+    font-size: 18px;
+    margin: 4% 30%;
+    transition: box-shadow .3s ease-out;
+    border: 1px solid aliceblue;
+    padding: 1%;
+    box-shadow: 0 10px 20px -8px rgba(255,255,255, .5);
+}
+
+.searchButton{
+    width: 20%;
+    height: 70px;
+    background-color: transparent;
+    color: aliceblue;
+    font-family: Montserrat;
+    font-size: 27px;
+    border-color: aliceblue;
+}
+.searchButton:focus{
+    box-shadow: 0 10px 20px -8px rgba(255,255,255, .5);
+}
+.searchButton:hover{
+    box-shadow: 0 10px 20px -8px rgba(255,255,255, .5);
+    transition: .4s;
+}
+
+@media(max-width: 767px){
+    .searchInput input{
+        width: 50%;
+    }
+
+    .searchButton{
+    width: 40%;
+    }
+}
+
+@media(max-width: 500px){
+    .searchInput input{
+        margin: 10% 0;
+        width: 90%;
+    }
+
+    .searchButton, .infoBox, .infoInBox{
+    width: 80%;
+    }
+ 
+}
