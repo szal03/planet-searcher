@@ -43,3 +43,28 @@
     box-shadow: 0 10px 20px -8px rgba(255,255,255, .5);
     transition: .4s;
 }
+
+@media(max-width: 767px){
+    .mainHeader h1{
+        font-size: 35px;
+    }
+    .mainHeader h2{
+        font-size: 30px;
+    }
+    .backButton{
+        width:50%;
+    }
+}
+
+
+@media(max-width: 500px){
+    .mainHeader h1{
+        font-size: 32px;
+    }
+    .mainHeader h2{
+        font-size: 28px;
+    }
+    .backButton{
+        width:80%;
+    }
+}

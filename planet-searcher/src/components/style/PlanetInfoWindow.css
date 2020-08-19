@@ -43,3 +43,10 @@ margin: 0 15%;
     border-color: #bbb !important;
     transition: 0.4s;
 }
+
+@media(max-width: 500px){
+    .closeBtn{
+        width: 80% !important;
+        margin: 0 10% !important;
+    }
+}

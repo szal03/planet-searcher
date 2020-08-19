@@ -1,5 +1,3 @@
-
-
 .searchInput{
     text-align: center;
     display: flex;
@@ -49,7 +47,6 @@ transition: box-shadow .3s ease-out;
 }
 .infoInBox{
     width: 40%;
-
     font-family: Montserrat;
     color: aliceblue;
     font-size: 18px;
@@ -77,3 +74,24 @@ transition: box-shadow .3s ease-out;
     transition: .4s;
 }
 
+@media(max-width: 767px){
+    .searchInput input{
+        width: 50%;
+    }
+
+    .searchButton{
+    width: 40%;
+    }
+}
+
+@media(max-width: 500px){
+    .searchInput input{
+        margin: 10% 0;
+        width: 90%;
+    }
+
+    .searchButton, .infoBox, .infoInBox{
+    width: 80%;
+    }
+ 
+}

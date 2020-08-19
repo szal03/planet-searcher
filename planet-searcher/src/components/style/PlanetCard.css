@@ -16,10 +16,7 @@
     background-position: 50%;
     transition: .4s;
 }
-/*.planetInBox{
-    width: 88%;
-    padding: 6%;
-}*/
+
 .titleStyle{
     padding: 4%;
     font-size: 16px;
@@ -29,10 +26,9 @@
     text-overflow: ellipsis;
     transition: .8s;
 }
-/* ???
-.titleStyle:hover{
-    white-space: unset;
-    overflow: unset;
-    text-overflow: unset;
-    transition: .8s;
-}*/
+
+@media(max-width:767px){
+    .titleStyle{
+        white-space: break-spaces;
+    }
+}
