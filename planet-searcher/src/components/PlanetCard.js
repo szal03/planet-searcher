@@ -5,8 +5,6 @@ import PlanetInfoWindow from "./PlanetInfoWindow";
 
 
 const PlanetCard = (props) => {
-    console.log("---------");
-    console.log(props.searchObject);
     const planets = props.data.map((item, index) => (
 
         <Col xs={12} sm={12} md={6} lg={4} xl={4} key={index} onClick={() => props.showInfo(item.data[0].nasa_id)}>

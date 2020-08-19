@@ -19,6 +19,7 @@ class App extends React.Component {
         failSearchStatus: false,
         searchObject: [],
         showInfoWindow: false,
+        showBasicInfo: false,
     }
 
     handleSearchInput = (e) => {
@@ -30,17 +31,14 @@ class App extends React.Component {
         if (this.state.inputValue === "") {
             return alert("need to write something")
         }
-        console.log(this.state.inputValue);
         const query = `${API}?q=${this.state.inputValue}`;
         fetch(query).then(response => {
             if (response.ok) {
-                console.log(response);
                 return response
             }
             throw Error(response.status)
         }).then(response => response.json())
             .then(data => {
-                console.log(data.collection.items);
                 if (data.collection.items.length > 0) {
                     this.setState({
                         searchValue: data.collection.items,
@@ -66,11 +64,9 @@ class App extends React.Component {
     }
 
     handleShowInfo = (id) => {
-        console.log(id);
         const collection = this.state.searchValue;
         const searchObject = collection.filter(elem => elem.data[0].nasa_id === id);
         const showInfoWindow = true;
-        console.log(searchObject);
         this.setState({
             searchObject,
             showInfoWindow: true,
@@ -83,6 +79,17 @@ class App extends React.Component {
         })
     }
 
+    handleChangeTrue = () => {
+        this.setState({
+            showBasicInfo: true,
+        })
+    }
+
+    handleChangeFalse = () => {
+        this.setState({
+            showBasicInfo: false,
+        })
+    }
 
 
     render() {
@@ -90,6 +97,7 @@ class App extends React.Component {
         const searchStatus = this.state.failSearchStatus;
         const searchObject = this.state.searchObject;
         const showInfoWindow = this.state.showInfoWindow;
+        const showBasicInfo = this.state.showBasicInfo;
         return (
             <div className="App">
                 <Header statusForSearch={this.state.statusSearch} click={this.handleBackButton} searchStatus={searchStatus} />
@@ -97,7 +105,10 @@ class App extends React.Component {
                 {searchActive ? null : <SearchInput
                     value={this.state.inputValue}
                     change={this.handleSearchInput}
-                    submitSearch={this.handleSumbmitValue} />}
+                    submitSearch={this.handleSumbmitValue}
+                    show={showBasicInfo}
+                    showInfo={this.handleChangeTrue}
+                    hideInfo={this.handleChangeFalse} />}
                 <div className="contentContainer">
                     <div className="cardsContainer">
                         {searchActive ? <PlanetCard data={this.state.searchValue}

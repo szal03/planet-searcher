@@ -3,7 +3,6 @@ import './style/PlanetInfoWindow.css';
 import { Row, Container, Col, Modal, Button, ModalHeader } from 'react-bootstrap';
 
 const PlanetInfoWindow = (props) => {
-    console.log(props.info);
     return (
         <Modal
             size="lg"
