@@ -1,0 +1,70 @@
+.mainHeader{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: Montserrat, sans-serif;
+    color: aliceblue;
+    margin-bottom: 50px;
+    margin-top: 10%;
+}
+.searchHeader{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: Montserrat, sans-serif;
+    color: aliceblue;
+    margin-bottom: 25px;
+    margin-top: 2%;
+}
+.failSearchMessage{
+    font-family: Montserrat, sans-serif;
+    color: aliceblue;
+    margin-bottom: 25px;
+    margin-top: 5%;
+}
+
+.backButton{
+    width: 20%;
+    height: 70px;
+    background-color: transparent;
+    color: aliceblue;
+    font-family: Montserrat;
+    font-size: 27px;
+    border-color: aliceblue;
+}
+.backButton:focus{
+    box-shadow: 0 10px 20px -8px rgba(255,255,255, .5);
+}
+.backButton:hover{
+    box-shadow: 0 10px 20px -8px rgba(255,255,255, .5);
+    transition: .4s;
+}
+
+@media(max-width: 767px){
+    .mainHeader h1{
+        font-size: 35px;
+    }
+    .mainHeader h2{
+        font-size: 30px;
+    }
+    .backButton{
+        width:50%;
+    }
+}
+
+
+@media(max-width: 500px){
+    .mainHeader h1{
+        font-size: 32px;
+    }
+    .mainHeader h2{
+        font-size: 28px;
+    }
+    .backButton{
+        width:80%;
+    }
+}

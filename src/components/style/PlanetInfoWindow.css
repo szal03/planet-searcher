@@ -1,0 +1,52 @@
+.infoWindow{
+background-color: white;
+position: absolute;
+display: block;
+width:70%;
+height: 15vh;
+top: 25vh;
+z-index: 10;
+margin: 0 15%;
+}
+
+.showModal{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.showModal h4{
+    margin-bottom: 3%;
+    text-align: center;
+}
+
+.showModal img{
+    width: 100%;
+    background-size: cover;
+    background-position: 80% 0%;
+}
+
+.textInModal p{
+    text-align: left;
+    text-overflow: ellipsis;
+    word-break: break-word;
+    padding: 1%;
+}
+
+.closeBtn{
+    background: transparent !important;
+    color: black !important;
+    border-color: black !important;
+    width: 15% !important;
+    transition: 0.4s !important;
+}
+.closeBtn:hover{
+    background-color: #d7ecff !important;
+    border-color: #bbb !important;
+    transition: 0.4s;
+}
+
+@media(max-width: 500px){
+    .closeBtn{
+        width: 80% !important;
+        margin: 0 10% !important;
+    }
+}
