@@ -3,7 +3,7 @@ import './style/SearchInput.css'
 
 const Info = () => {
     return (
-        <div className="infoInBox">Enter the name of the planet or star you are interested in. As a result, you will receive photos with descriptions.</div>
+        <div className="infoInBox"><span>Enter the name of the planet or star you are interested in. As a result, you will receive photos with descriptions.</span></div>
     )
 }
 
